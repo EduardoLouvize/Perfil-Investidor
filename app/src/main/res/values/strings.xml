@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Perfil Investidor</string>
+    <string name="iniciar_teste">Iniciar Teste</string>
+    <string name="avancar">Avancar</string>
+    <string name="texto_intro">O questionário à seguir irá auxiliá-lo a identifcar seu pefil de investidor (conservador,
+        moderado ou arrojado).\n\n
+        Para cada questão, escolha a alternativa que mais se aproxima dos seus objetivos e
+        expectativas de investimento.
+    </string>
+    <string name="digite_seu_nome_aqui">Digite seu nome aqui</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pergunta_um">Por quanto tempo você pretende deixar seu dinheiro investido?</string>
+    <string name="creditos">App desenvolvido com base no questionário e metodologia disponibilizados pelo <b>Banco
+        Paulista</b>.
+    </string>
+    <string name="perfil_conservador">Seu perfil é:Conservador</string>
+    <string name="perfil_moderado">Seu perfil é: Moderado</string>
+    <string name="perfil_arrojado">Seu perfil é: Arrojado</string>
+</resources>
+

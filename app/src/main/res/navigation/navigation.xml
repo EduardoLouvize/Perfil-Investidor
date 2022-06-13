@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@id/perguntaUmFragment"
+>
+
+    <fragment android:id="@+id/perguntaUmFragment"
+              android:name="com.example.perfilinvestidor.fragments.PerguntaUmFragment"
+              android:label="fragment_pergunta_um" tools:layout="@layout/fragment_pergunta_um">
+        <action android:id="@+id/action_perguntaUmFragment_to_perguntaDoisFragment"
+                app:destination="@id/perguntaDoisFragment"/>
+        <argument android:name="pontuacaoFinal" app:argType="integer" android:defaultValue="0"/>
+    </fragment>
+    <fragment android:id="@+id/perguntaDoisFragment"
+              android:name="com.example.perfilinvestidor.fragments.PerguntaDoisFragment"
+              android:label="fragment_pergunta_dois" tools:layout="@layout/fragment_pergunta_dois">
+        <argument android:name="pontuacaoFinal" app:argType="integer" android:defaultValue="0"/>
+        <action android:id="@+id/action_perguntaDoisFragment_to_perguntaTresFragment2"
+                app:destination="@id/perguntaTresFragment2"/>
+    </fragment>
+    <fragment android:id="@+id/perguntaTresFragment2"
+              android:name="com.example.perfilinvestidor.fragments.PerguntaTresFragment"
+              android:label="fragment_pergunta_tres" tools:layout="@layout/fragment_pergunta_tres">
+        <argument android:name="pontuacaoFinal" app:argType="integer" android:defaultValue="0"/>
+        <action android:id="@+id/action_perguntaTresFragment2_to_perguntaQuatroFragment"
+                app:destination="@id/perguntaQuatroFragment"/>
+    </fragment>
+    <fragment android:id="@+id/perguntaQuatroFragment"
+              android:name="com.example.perfilinvestidor.fragments.PerguntaQuatroFragment"
+              android:label="fragment_pergunta_quatro" tools:layout="@layout/fragment_pergunta_quatro">
+        <argument android:name="pontuacaoFinal" app:argType="integer" android:defaultValue="0"/>
+        <action android:id="@+id/action_perguntaQuatroFragment_to_perguntaCincoFragment"
+                app:destination="@id/perguntaCincoFragment"/>
+    </fragment>
+    <fragment android:id="@+id/perguntaCincoFragment"
+              android:name="com.example.perfilinvestidor.fragments.PerguntaCincoFragment"
+              android:label="fragment_pergunta_cinco" tools:layout="@layout/fragment_pergunta_cinco">
+        <argument android:name="pontuacaoFinal" app:argType="integer" android:defaultValue="0"/>
+        <action android:id="@+id/action_perguntaCincoFragment_to_perguntaSeisFragment"
+                app:destination="@id/perguntaSeisFragment"/>
+    </fragment>
+    <fragment android:id="@+id/perguntaSeisFragment"
+              android:name="com.example.perfilinvestidor.fragments.PerguntaSeisFragment"
+              android:label="fragment_pergunta_seis" tools:layout="@layout/fragment_pergunta_seis">
+        <argument android:name="pontuacaoFinal" app:argType="integer" android:defaultValue="0"/>
+        <action android:id="@+id/action_perguntaSeisFragment_to_perguntaSeteFragment"
+                app:destination="@id/perguntaSeteFragment"/>
+    </fragment>
+    <fragment android:id="@+id/perguntaSeteFragment"
+              android:name="com.example.perfilinvestidor.fragments.PerguntaSeteFragment"
+              android:label="fragment_pergunta_sete" tools:layout="@layout/fragment_pergunta_sete">
+        <argument android:name="pontuacaoFinal" app:argType="integer" android:defaultValue="0"/>
+        <action android:id="@+id/action_perguntaSeteFragment_to_perguntaOitoFragment"
+                app:destination="@id/perguntaOitoFragment"/>
+    </fragment>
+    <activity android:id="@+id/resultadoActivity" android:name="com.example.perfilinvestidor.ResultadoActivity"
+              android:label="activity_resultado" tools:layout="@layout/activity_resultado">
+        <argument android:name="pontuacaoFinal" app:argType="integer" android:defaultValue="0"/>
+        <argument android:name="nomeUsuario" app:argType="string" android:defaultValue='""'/>
+    </activity>
+    <activity android:id="@+id/mainActivity" android:name="com.example.perfilinvestidor.MainActivity"
+              android:label="activity_main" tools:layout="@layout/activity_main"/>
+    <fragment android:id="@+id/perguntaOitoFragment"
+              android:name="com.example.perfilinvestidor.fragments.PerguntaOitoFragment"
+              android:label="fragment_pergunta_oito" tools:layout="@layout/fragment_pergunta_oito">
+        <argument android:name="pontuacaoFinal" app:argType="integer" android:defaultValue="0"/>
+        <action android:id="@+id/action_perguntaOitoFragment_to_perguntaNoveFragment"
+                app:destination="@id/perguntaNoveFragment">
+            <argument android:name="pontuacaoFinal" android:defaultValue='0'/>
+        </action>
+    </fragment>
+    <fragment android:id="@+id/perguntaNoveFragment"
+              android:name="com.example.perfilinvestidor.fragments.PerguntaNoveFragment"
+              android:label="fragment_pergunta_nove" tools:layout="@layout/fragment_pergunta_nove">
+        <argument android:name="pontuacaoFinal" app:argType="integer" android:defaultValue="0"/>
+        <action android:id="@+id/action_perguntaNoveFragment_to_resultadoActivity"
+                app:destination="@id/resultadoActivity"/>
+        <argument android:name="nomeUsuario" app:argType="string" android:defaultValue='""'/>
+    </fragment>
+</navigation>
